@@ -119,13 +119,13 @@ export default new Vuex.Store({
     async borrarDB({ commit }, payload) {
       const obj = payload;
       if (!obj) return;
-      // const idFB = obj.id;
+      const idFB = obj.id;
       //Elimina FB
-      // try {
-      //   await db.collection("juguetes").doc(idFB).delete();
-      // } catch (error) {
-      //   console.log(error);
-      // }
+      try {
+        await db.collection("juguetes").doc(idFB).delete();
+      } catch (error) {
+        console.log(error);
+      }
 
       // Elimina State
       commit("borrarProductos", obj);
