@@ -20,7 +20,6 @@ Vue.config.productionTip = false;
 
 router.beforeEach((to, from, next) => {
   const isAuthenticated = localStorage.getItem("login")
-  console.log(isAuthenticated);
   if (to.name !== 'Login' && isAuthenticated !== "logueado") next({ name: 'Login' });
   if (to.name === 'Login' && isAuthenticated === "logueado") next({ name: 'Home' });
   else next()
