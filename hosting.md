@@ -1,1 +1,1 @@
-npm install -g firebase-tools
+https://otto-klaus-5eb23.web.app
